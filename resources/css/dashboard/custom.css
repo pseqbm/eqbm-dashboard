@@ -1,0 +1,593 @@
+:root {
+    --dgray: #222222;
+    --mgray: #2E3237;
+    --lgray: #707070;
+    --prime: rgb(47, 236, 199);
+    --primea: rgba(47, 236, 199, 0.33);
+    --primeup: #ADF49C;
+    --primedn: #007158;
+    --error: #E23A24;
+    --errorup: #FF9840;
+  }
+      /* CUSTOM STYLING*/
+
+.navbar-brand h1 {
+
+    background: url('../../img/logo/eqbm-logo-webalt-v1.png') no-repeat center;
+    text-indent: -999999px;
+    width: 100%;
+    background-size: 60%;
+    height: 70px;
+
+}
+
+._text-success {
+
+    color: var(--prime);
+
+}
+._text-failure {
+
+    color: var(--error);
+
+}
+.flex-middle {
+
+    display: flex;
+    align-items: center;
+    
+}
+.dashboard-portfolio-balance {
+
+    padding: 16px 0 0;
+
+}
+.portfolio-balance {
+
+  padding-left: 30px;
+  display: inline-block;
+  padding-top: 5px;
+
+}
+#dashboard-activity p {
+
+    border-bottom: rgba(0,0,0,0.125) solid 1px;
+    padding-bottom: 15px;
+
+}
+#dashboard-activity p:last-child {
+
+    border: none;
+    padding-bottom: 15px;
+
+}
+.dashboard-footer p {
+
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0;
+
+}
+.dashboard-footer h5 {
+
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0;
+
+}
+.dashboard-footer hr {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+
+}
+#identity-address {
+
+  margin-bottom: 20px;
+
+}
+.input-group-suffix {
+  padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: black;
+    border: 1px solid var(--blue);
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+}
+.wizard > .content {
+
+  overflow: inherit;
+
+}
+form select.form-control:not([multiple]):not([size]), .form select.form-control:not([multiple]):not([size]) {
+  
+  appearance: none;
+  -webkit-appearance: none;
+  text-align: center;
+
+}
+
+.payment-logo {
+
+  border: 1px solid white;
+  border-radius: 5px;
+  text-align: center;
+
+}
+.payment-logo a {
+
+  display: block;
+  cursor: pointer;
+
+}
+.payment-logo img {
+
+  width: auto;
+  padding: 30px;
+  max-height: 110px;
+
+}
+
+ /* The switch - the box around the slider */
+ .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.25);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--prime);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--prime);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
+  /* THEME STYLING*/
+  body.eqbm {
+    background-color: var(--dgray);
+    background-image: linear-gradient(to bottom right, var(--mgray) , var(--dgray));
+  }
+  body.eqbm ::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, rgba(132,36,72,0), var(--dgray));
+  }
+  body.eqbm .alert.-primary {
+    background: linear-gradient(to bottom right, var(--lgray), rgba(192,72,72,0.75));
+  }
+  body.eqbm .alert.-primary.-contrasted .alert-icon {
+    background: var(--error);
+  }
+  body.eqbm .alert.-contrasted .alert-icon.-primary {
+    background: var(--error);
+  }
+  body.eqbm .alert.-border-primary {
+    border-color: var(--errorup);
+  }
+  body.eqbm .btn.-primary {
+    background-image: linear-gradient(to bottom, var(--prime), var(--primea));
+  }
+  body.eqbm .datepicker table tr td.highlighted {
+    background-color: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.highlighted:focus,
+  body.eqbm .datepicker table tr td.highlighted.focus {
+    background-color: var(--primea);
+    border-color: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.highlighted:hover,
+  body.eqbm .datepicker table tr td.highlighted:active,
+  body.eqbm .datepicker table tr td.highlighted.active {
+    background-color: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.highlighted:active:hover,
+  body.eqbm .datepicker table tr td.highlighted.active:hover,
+  body.eqbm .datepicker table tr td.highlighted:active:focus,
+  body.eqbm .datepicker table tr td.highlighted.active:focus,
+  body.eqbm .datepicker table tr td.highlighted:active.focus,
+  body.eqbm .datepicker table tr td.highlighted.active.focus {
+    background-color: var(--primea);
+    border-color: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.highlighted.disabled:hover,
+  body.eqbm .datepicker table tr td.highlighted[disabled]:hover {
+    background-color: var(--primea);
+  }
+  body.eqbm fieldset[disabled] .datepicker table tr td.highlighted:hover {
+    background-color: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.highlighted.disabled:focus,
+  body.eqbm .datepicker table tr td.highlighted[disabled]:focus {
+    background-color: var(--primea);
+  }
+  body.eqbm fieldset[disabled] .datepicker table tr td.highlighted:focus {
+    background-color: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.highlighted.disabled.focus,
+  body.eqbm .datepicker table tr td.highlighted[disabled].focus {
+    background-color: var(--primea);
+  }
+  body.eqbm fieldset[disabled] .datepicker table tr td.highlighted.focus {
+    background-color: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.highlighted.focused {
+    background: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.highlighted.disabled {
+    background: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.highlighted.disabled:active {
+    background: var(--primea);
+  }
+  body.eqbm .datepicker table tr td.active:hover,
+  body.eqbm .datepicker table tr td.active.highlighted:hover,
+  body.eqbm .datepicker table tr td.active:active,
+  body.eqbm .datepicker table tr td.active.highlighted:active,
+  body.eqbm .datepicker table tr td.active.active,
+  body.eqbm .datepicker table tr td.active.highlighted.active {
+    background-color: var(--prime);
+    border-color: var(--prime);
+  }
+  body.eqbm .datepicker table tr td.active:active:hover,
+  body.eqbm .datepicker table tr td.active.highlighted:active:hover,
+  body.eqbm .datepicker table tr td.active.active:hover,
+  body.eqbm .datepicker table tr td.active.highlighted.active:hover,
+  body.eqbm .datepicker table tr td.active:active:focus,
+  body.eqbm .datepicker table tr td.active.highlighted:active:focus,
+  body.eqbm .datepicker table tr td.active.active:focus,
+  body.eqbm .datepicker table tr td.active.highlighted.active:focus,
+  body.eqbm .datepicker table tr td.active:active.focus,
+  body.eqbm .datepicker table tr td.active.highlighted:active.focus,
+  body.eqbm .datepicker table tr td.active.active.focus,
+  body.eqbm .datepicker table tr td.active.highlighted.active.focus {
+    background-color: var(--primedn);
+    border-color: var(--primedn);
+  }
+  body.eqbm .dropdown-menu.-primary {
+    background: ;
+    background: linear-gradient(to right, var(--prime), var(--primea));
+  }
+  body.eqbm ul.table-of-contents > li.active > a {
+    border-left: 2px solid var(--prime);
+  }
+  body.eqbm ul.table-of-contents > li > a:hover {
+    border-left: 2px solid var(--prime);
+  }
+  body.eqbm ul.table-of-contents > li ul li.active a {
+    border-left-color: var(--prime);
+  }
+  body.eqbm .count-bubble {
+    background: var(--prime);
+  }
+  body.eqbm form .form-group.-primary label,
+  body.eqbm .form .form-group.-primary label,
+  body.eqbm form .form-group.has-primary label,
+  body.eqbm .form .form-group.has-primary label,
+  body.eqbm form .form-group.-primary .help-block,
+  body.eqbm .form .form-group.-primary .help-block,
+  body.eqbm form .form-group.has-primary .help-block,
+  body.eqbm .form .form-group.has-primary .help-block {
+    color: var(--prime);
+  }
+  body.eqbm form .form-group.-primary .form-control,
+  body.eqbm .form .form-group.-primary .form-control,
+  body.eqbm form .form-group.has-primary .form-control,
+  body.eqbm .form .form-group.has-primary .form-control,
+  body.eqbm form .form-group.-primary .form-check label::before,
+  body.eqbm .form .form-group.-primary .form-check label::before,
+  body.eqbm form .form-group.has-primary .form-check label::before,
+  body.eqbm .form .form-group.has-primary .form-check label::before {
+    border-color: var(--primedn);
+  }
+  body.eqbm form .form-group.-secondary label,
+  body.eqbm .form .form-group.-secondary label,
+  body.eqbm form .form-group.has-secondary label,
+  body.eqbm .form .form-group.has-secondary label,
+  body.eqbm form .form-group.-secondary .help-block,
+  body.eqbm .form .form-group.-secondary .help-block,
+  body.eqbm form .form-group.has-secondary .help-block,
+  body.eqbm .form .form-group.has-secondary .help-block {
+    color: var(--prime);
+  }
+  body.eqbm .modal.-primary .modal-dialog .modal-content {
+    background: var(--prime);
+    background: linear-gradient(to right, var(--prime), var(--primea));
+  }
+  body.eqbm .modal .modal-header.-primary {
+    background: var(--prime);
+    background: linear-gradient(to right, var(--prime), var(--primea));
+  }
+  body.eqbm .navbar .navbar-item-count {
+    background: var(--prime);
+  }
+  body.eqbm .gritter-item.-primary {
+    background: var(--prime);
+    background: linear-gradient(to right, rgba(192,72,72,0.8), rgba(192,72,72,0.5));
+    color: #fff;
+  }
+  body.eqbm .panel.-primary {
+    color: #fff;
+    background: linear-gradient(to top left, var(--primea), rgba(192,72,72,0.8));
+  }
+
+  body.eqbm .panel.-bordered-primary {
+    border-color: var(--prime);
+  }
+  body.eqbm .progress .bar.-primary {
+    background: var(--prime);
+    background: linear-gradient(to right, var(--primea), var(--prime));
+    border-bottom-color: var(--prime);
+  }
+  body.eqbm .sidebar .sidebar-wrapper ul li.-active > a i {
+    background:var(--prime);;
+  }
+  body.eqbm .sidebar .sidebar-wrapper ul li.-active > a:hover i,
+  body.eqbm .sidebar .sidebar-wrapper ul li.-active > a:focus i,
+  body.eqbm .sidebar .sidebar-wrapper ul li.-active > a:active i,
+  body.eqbm .sidebar .sidebar-wrapper ul li.-active > a[aria-expanded='true'] i {
+    background: var(--prime);;
+  }
+  body.eqbm .sidebar .sidebar-wrapper ul li a[aria-expanded='true'] i {
+    background: var(--primea);
+  }
+  body.eqbm .sidebar .sidebar-wrapper ul li a:hover i,
+  body.eqbm .sidebar .sidebar-wrapper ul li a:focus i,
+  body.eqbm .sidebar .sidebar-wrapper ul li a:active i {
+    background: var(--primedn);
+  }
+  body.eqbm .tag.-primary {
+    background: var(--prime);
+    background: linear-gradient(to bottom right, rgba(192,72,72,0.8), rgba(192,72,72,0.4));
+  }
+
+  /* LIGHT THEME -------------------- */
+body.eqbm-light {
+    background-color: var(--lgray);
+    background-image: linear-gradient(to bottom right, white , #eee);
+  }
+  body.eqbm-light ::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, rgba(132,36,72,0), var(--lgray));
+  }
+  body.eqbm-light .alert.-primary {
+    background: linear-gradient(to bottom right, var(--dgray), rgba(192,72,72,0.75));
+  }
+  body.eqbm-light .alert.-primary.-contrasted .alert-icon {
+    background: var(--error);
+  }
+  body.eqbm-light .alert.-contrasted .alert-icon.-primary {
+    background: var(--error);
+  }
+  body.eqbm-light .alert.-border-primary {
+    border-color: var(--errorup);
+  }
+  body.eqbm-light .btn.-primary {
+    background-image: linear-gradient(to bottom, var(--prime), var(--primea));
+  }
+  body.eqbm-light .datepicker table tr td.highlighted {
+    background-color: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.highlighted:focus,
+  body.eqbm-light .datepicker table tr td.highlighted.focus {
+    background-color: var(--primea);
+    border-color: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.highlighted:hover,
+  body.eqbm-light .datepicker table tr td.highlighted:active,
+  body.eqbm-light .datepicker table tr td.highlighted.active {
+    background-color: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.highlighted:active:hover,
+  body.eqbm-light .datepicker table tr td.highlighted.active:hover,
+  body.eqbm-light .datepicker table tr td.highlighted:active:focus,
+  body.eqbm-light .datepicker table tr td.highlighted.active:focus,
+  body.eqbm-light .datepicker table tr td.highlighted:active.focus,
+  body.eqbm-light .datepicker table tr td.highlighted.active.focus {
+    background-color: var(--primea);
+    border-color: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.highlighted.disabled:hover,
+  body.eqbm-light .datepicker table tr td.highlighted[disabled]:hover {
+    background-color: var(--primea);
+  }
+  body.eqbm-light fieldset[disabled] .datepicker table tr td.highlighted:hover {
+    background-color: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.highlighted.disabled:focus,
+  body.eqbm-light .datepicker table tr td.highlighted[disabled]:focus {
+    background-color: var(--primea);
+  }
+  body.eqbm-light fieldset[disabled] .datepicker table tr td.highlighted:focus {
+    background-color: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.highlighted.disabled.focus,
+  body.eqbm-light .datepicker table tr td.highlighted[disabled].focus {
+    background-color: var(--primea);
+  }
+  body.eqbm-light fieldset[disabled] .datepicker table tr td.highlighted.focus {
+    background-color: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.highlighted.focused {
+    background: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.highlighted.disabled {
+    background: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.highlighted.disabled:active {
+    background: var(--primea);
+  }
+  body.eqbm-light .datepicker table tr td.active:hover,
+  body.eqbm-light .datepicker table tr td.active.highlighted:hover,
+  body.eqbm-light .datepicker table tr td.active:active,
+  body.eqbm-light .datepicker table tr td.active.highlighted:active,
+  body.eqbm-light .datepicker table tr td.active.active,
+  body.eqbm-light .datepicker table tr td.active.highlighted.active {
+    background-color: var(--prime);
+    border-color: var(--prime);
+  }
+  body.eqbm-light .datepicker table tr td.active:active:hover,
+  body.eqbm-light .datepicker table tr td.active.highlighted:active:hover,
+  body.eqbm-light .datepicker table tr td.active.active:hover,
+  body.eqbm-light .datepicker table tr td.active.highlighted.active:hover,
+  body.eqbm-light .datepicker table tr td.active:active:focus,
+  body.eqbm-light .datepicker table tr td.active.highlighted:active:focus,
+  body.eqbm-light .datepicker table tr td.active.active:focus,
+  body.eqbm-light .datepicker table tr td.active.highlighted.active:focus,
+  body.eqbm-light .datepicker table tr td.active:active.focus,
+  body.eqbm-light .datepicker table tr td.active.highlighted:active.focus,
+  body.eqbm-light .datepicker table tr td.active.active.focus,
+  body.eqbm-light .datepicker table tr td.active.highlighted.active.focus {
+    background-color: var(--primedn);
+    border-color: var(--primedn);
+  }
+  body.eqbm-light .dropdown-menu.-primary {
+    background: ;
+    background: linear-gradient(to right, var(--prime), var(--primea));
+  }
+  body.eqbm-light ul.table-of-contents > li.active > a {
+    border-left: 2px solid var(--prime);
+  }
+  body.eqbm-light ul.table-of-contents > li > a:hover {
+    border-left: 2px solid var(--prime);
+  }
+  body.eqbm-light ul.table-of-contents > li ul li.active a {
+    border-left-color: var(--prime);
+  }
+  body.eqbm-light .count-bubble {
+    background: var(--prime);
+  }
+  body.eqbm-light form .form-group.-primary label,
+  body.eqbm-light .form .form-group.-primary label,
+  body.eqbm-light form .form-group.has-primary label,
+  body.eqbm-light .form .form-group.has-primary label,
+  body.eqbm-light form .form-group.-primary .help-block,
+  body.eqbm-light .form .form-group.-primary .help-block,
+  body.eqbm-light form .form-group.has-primary .help-block,
+  body.eqbm-light .form .form-group.has-primary .help-block {
+    color: var(--prime);
+  }
+  body.eqbm-light form .form-group.-primary .form-control,
+  body.eqbm-light .form .form-group.-primary .form-control,
+  body.eqbm-light form .form-group.has-primary .form-control,
+  body.eqbm-light .form .form-group.has-primary .form-control,
+  body.eqbm-light form .form-group.-primary .form-check label::before,
+  body.eqbm-light .form .form-group.-primary .form-check label::before,
+  body.eqbm-light form .form-group.has-primary .form-check label::before,
+  body.eqbm-light .form .form-group.has-primary .form-check label::before {
+    border-color: var(--primedn);
+  }
+  body.eqbm-light form .form-group.-secondary label,
+  body.eqbm-light .form .form-group.-secondary label,
+  body.eqbm-light form .form-group.has-secondary label,
+  body.eqbm-light .form .form-group.has-secondary label,
+  body.eqbm-light form .form-group.-secondary .help-block,
+  body.eqbm-light .form .form-group.-secondary .help-block,
+  body.eqbm-light form .form-group.has-secondary .help-block,
+  body.eqbm-light .form .form-group.has-secondary .help-block {
+    color: var(--prime);
+  }
+  body.eqbm-light .modal.-primary .modal-dialog .modal-content {
+    background: var(--prime);
+    background: linear-gradient(to right, var(--prime), var(--primea));
+  }
+  body.eqbm-light .modal .modal-header.-primary {
+    background: var(--prime);
+    background: linear-gradient(to right, var(--prime), var(--primea));
+  }
+  body.eqbm-light .navbar .navbar-item-count {
+    background: var(--prime);
+  }
+  body.eqbm-light .gritter-item.-primary {
+    background: var(--prime);
+    background: linear-gradient(to right, rgba(192,72,72,0.8), rgba(192,72,72,0.5));
+    color: #fff;
+  }
+  body.eqbm-light .panel.-primary {
+    color: #fff;
+    background: linear-gradient(to top left, var(--primea), rgba(192,72,72,0.8));
+  }
+
+  body.eqbm-light .panel.-bordered-primary {
+    border-color: var(--prime);
+  }
+  body.eqbm-light .progress .bar.-primary {
+    background: var(--prime);
+    background: linear-gradient(to right, var(--primea), var(--prime));
+    border-bottom-color: var(--prime);
+  }
+  body.eqbm-light .sidebar .sidebar-wrapper ul li.-active > a i {
+    background:var(--prime);;
+  }
+  body.eqbm-light .sidebar .sidebar-wrapper ul li.-active > a:hover i,
+  body.eqbm-light .sidebar .sidebar-wrapper ul li.-active > a:focus i,
+  body.eqbm-light .sidebar .sidebar-wrapper ul li.-active > a:active i,
+  body.eqbm-light .sidebar .sidebar-wrapper ul li.-active > a[aria-expanded='true'] i {
+    background: var(--prime);;
+  }
+  body.eqbm-light .sidebar .sidebar-wrapper ul li a[aria-expanded='true'] i {
+    background: var(--primea);
+  }
+  body.eqbm-light .sidebar .sidebar-wrapper ul li a:hover i,
+  body.eqbm-light .sidebar .sidebar-wrapper ul li a:focus i,
+  body.eqbm-light .sidebar .sidebar-wrapper ul li a:active i {
+    background: var(--primedn);
+  }
+  body.eqbm-light .tag.-primary {
+    background: var(--prime);
+    background: linear-gradient(to bottom right, rgba(192,72,72,0.8), rgba(192,72,72,0.4));
+  }
+
+
+
